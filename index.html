@@ -13,21 +13,16 @@
 
 <body>
 
-    <header>
-        <h1>Hangman</h1>
-    </header>
-
-    <main>
-    
       <div class="container">
+        <h1>Hangman</h1>
         <div class="hangman-ascii" id="hangmanAscii">
           <pre id="hangmanAsciiText">
-             ______
-             |    |
-             |    
-             |   
-             |   
-            _|_
+            ______
+            |    |
+            |    
+            |
+            |
+           _|_
           </pre>
         </div>
 
@@ -49,6 +44,7 @@
           <button class="btns" onclick="guessLetter('L')">L</button>
           <button class="btns" onclick="guessLetter('M')">M</button>
           <button class="btns" onclick="guessLetter('N')">N</button>
+          <button class="btns" onclick="guessLetter('Ñ')">Ñ</button>
           <button class="btns" onclick="guessLetter('O')">O</button>
           <button class="btns" onclick="guessLetter('P')">P</button>
           <button class="btns" onclick="guessLetter('Q')">Q</button>
@@ -80,8 +76,6 @@
           <button class="modal-btn" onclick="nextWord()">Next Word</button>
         </div>
       </div>
-
-    </main>
 
 </body>
 
