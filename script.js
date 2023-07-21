@@ -59,25 +59,25 @@ function updateHangmanAscii() {
   const hangmanImg = document.getElementById('hangmanImg');
   switch (hangmanStage) {
     case 1:
-      hangmanImg.src = 'hangman png/1.png';
+      hangmanImg.src = 'assets/hangman png/1.png';
       break;
     case 2:
-      hangmanImg.src = 'hangman png/2.png';
+      hangmanImg.src = 'assets/hangman png/2.png';
       break;
     case 3:
-      hangmanImg.src = 'hangman png/3.png';
+      hangmanImg.src = 'assets/hangman png/3.png';
       break;
     case 4:
-      hangmanImg.src = 'hangman png/4.png';
+      hangmanImg.src = 'assets/hangman png/4.png';
       break;
     case 5:
-      hangmanImg.src = 'hangman png/5.png';
+      hangmanImg.src = 'assets/hangman png/5.png';
       break;
     case 6:
-      hangmanImg.src = 'hangman png/6.png';
+      hangmanImg.src = 'assets/hangman png/6.png';
       break;
     default:
-      hangmanImg.src = 'hangman png/0.png';
+      hangmanImg.src = 'assets/hangman png/0.png';
   }
 }
 
@@ -95,7 +95,7 @@ function resetGame() {
   const loseModal = document.getElementById('loseModal');
   loseModal.style.display = 'none';
   const hangmanImg = document.getElementById('hangmanImg');
-  hangmanImg.src = 'hangman png/0.png';
+  hangmanImg.src = 'assets/hangman png/0.png';
 
     // Habilitar los botones de clase "btns"
     const letterButtons = document.querySelectorAll('.btns');
@@ -118,7 +118,7 @@ function nextWord() {
     hangmanStage = 0;
     updateWordDisplay();
     updateHangmanAscii();
-    hangmanImg.src = 'hangman png/0.png'; 
+    hangmanImg.src = 'assets/hangman png/0.png'; 
 
         // Habilitar los botones de clase "btns"
         const letterButtons = document.querySelectorAll('.btns');
@@ -127,7 +127,7 @@ function nextWord() {
         });
         
   } else {
-    hangmanImg.src = 'hangman png/0.png'; 
+    hangmanImg.src = 'assets/hangman png/0.png'; 
   }
 }
 
