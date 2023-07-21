@@ -13,7 +13,7 @@
 
 <body>
 
-      <div class="container">
+      <div class="container hidden" id="gameContent">
         
         <h1 class="hangman-title">Hangman</h1>
 
@@ -71,6 +71,17 @@
           <button class="modal-btn" onclick="nextWord()">Next Word</button>
         </div>
       </div>
+
+      <!-- Ventana modal inicial -->
+      <div id="startModal" class="modal">
+        <div class="modal-content">
+          <h2>Hangman Game</h2>
+          <label for="playerName">Enter your name:</label>
+          <input type="text" id="playerName" placeholder="Your Name">
+          <button class="modal-btn" onclick="startGame()">Start Game</button>
+        </div>
+      </div>
+
 
 </body>
 

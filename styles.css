@@ -45,6 +45,21 @@ body {
   font-weight: bold;
 }
 
+.btns:hover{
+  background-color: #51ff51;
+}
+
+.btns:disabled {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+  transition: 0.3s;
+}
+
+.btns:disabled:hover{
+
+}
+
 button:focus {
   outline: none;
 }
@@ -114,6 +129,23 @@ button:focus {
   background-color: #00ff00;
   cursor: pointer;
 }
+
+#startModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#playerName {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
 
 
 /* Responsive */

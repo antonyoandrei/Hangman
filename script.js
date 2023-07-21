@@ -5,7 +5,20 @@ let wrongGuesses;
 let hangmanStage;
 let initialHangmanAscii;
 
+function showStartModal() {
+  const startModal = document.getElementById('startModal');
+  startModal.style.display = 'block';
+}
+
 function startGame() {
+  const playerNameInput = document.getElementById('playerName');
+  const playerName = playerNameInput.value.trim();
+  startModal.style.display = 'none';
+
+  // Muestro el resto del contenido del juego
+  const gameContent = document.getElementById('gameContent');
+  gameContent.classList.remove('hidden');
+
   currentWord = words[0];
   guessedLetters = Array(currentWord.length).fill('_');
   wrongGuesses = 0;
@@ -33,6 +46,8 @@ function guessLetter(letter) {
       showWinModal();
     }
   }
+  const letterButton = event.target;
+  letterButton.disabled = true;
 }
 
 function updateWordDisplay() {
@@ -102,4 +117,4 @@ function nextWord() {
   }
 }
 
-window.onload = startGame;
+window.onload = showStartModal;
