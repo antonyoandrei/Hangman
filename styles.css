@@ -1,5 +1,19 @@
+@font-face {
+  font-family: 'matrix';
+  src: url('/assets/fonts/matrix.woff2') format('woff2'),
+    url('/assets/fonts/matrix.woff2') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'trigram';
+  src: url('/assets/fonts/trigram.woff2') format('woff2'),
+    url('/assets/fonts/trigram.woff') format('woff');
+  font-display: swap;
+}
+
 body {
-  font-family:'Inconsolata', monospace;
+  font-family: 'trigram', monospace;
   background-color: black;
   color: #00ff00;
   display: flex;
@@ -8,6 +22,11 @@ body {
   align-items: center;
   height: 90vh;
   margin: 0;
+}
+
+.hangman-title {
+  font-size: 80px;
+  font-family: 'matrix', monospace
 }
 
 .container {
@@ -57,31 +76,11 @@ body {
 }
 
 .btns:disabled:hover{
-
+  background-color: gray;
 }
 
 button:focus {
   outline: none;
-}
-
-@media (max-width: 600px) {
-  .letter-buttons {
-    grid-template-columns: repeat(3, 1fr); 
-  }
-
-  .btns {
-    width: 70px;
-    height: 30px;
-    font-size: 15px;
-  }
-
-  .hangman-img {
-    width: 255px;
-  }
-
-  .hangman-title {
-    font-size: 40px;
-  }
 }
 
 /* Modals */
@@ -124,6 +123,7 @@ button:focus {
 
 .modal-btn {
   font-size: 18px;
+  font-family: 'trigram', monospace ;
   height: 40px;
   border: none;
   background-color: #00ff00;
@@ -146,6 +146,24 @@ button:focus {
   display: none;
 }
 
-
-
 /* Responsive */
+
+@media (max-width: 700px) {
+  .letter-buttons {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+
+  .btns {
+    width: 70px;
+    height: 30px;
+    font-size: 15px;
+  }
+
+  .hangman-img {
+    width: 255px;
+  }
+
+  .hangman-title {
+    font-size: 40px;
+  }
+}
