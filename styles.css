@@ -19,10 +19,8 @@ body {
   width: 90%;
 }
 
-.hangman-ascii {
-  font-family: monospace;
-  font-size: 18px;
-  margin-right: 5rem;
+.hangman-img {
+  width: 200px;
 }
 
 .word-display {
