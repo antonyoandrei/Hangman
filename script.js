@@ -96,6 +96,13 @@ function resetGame() {
   loseModal.style.display = 'none';
   const hangmanImg = document.getElementById('hangmanImg');
   hangmanImg.src = 'hangman png/0.png';
+
+    // Habilitar los botones de clase "btns"
+    const letterButtons = document.querySelectorAll('.btns');
+    letterButtons.forEach(button => {
+      button.disabled = false;
+    });
+
   startGame();
 }
 
@@ -112,6 +119,13 @@ function nextWord() {
     updateWordDisplay();
     updateHangmanAscii();
     hangmanImg.src = 'hangman png/0.png'; 
+
+        // Habilitar los botones de clase "btns"
+        const letterButtons = document.querySelectorAll('.btns');
+        letterButtons.forEach(button => {
+          button.disabled = false;
+        });
+        
   } else {
     hangmanImg.src = 'hangman png/0.png'; 
   }
