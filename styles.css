@@ -49,6 +49,26 @@ button:focus {
   outline: none;
 }
 
+@media (max-width: 600px) {
+  .letter-buttons {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+
+  .btns {
+    width: 70px;
+    height: 30px;
+    font-size: 15px;
+  }
+
+  .hangman-img {
+    width: 255px;
+  }
+
+  .hangman-title {
+    font-size: 40px;
+  }
+}
+
 /* Modals */
 
 .modal {
