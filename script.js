@@ -1,4 +1,4 @@
-const words = ["JAVA"];
+const words = ["JAVA", "PIZZA", "MATRIX", "CHORIZO", "CABEZOTA"];
 let currentWord;
 let guessedLetters;
 let wrongGuesses;

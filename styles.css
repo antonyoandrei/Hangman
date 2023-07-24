@@ -247,6 +247,10 @@ button:focus {
   }
 
   .congrats-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .congrats-paragraph {
+    font-size: 0.8rem;
   }
 }
