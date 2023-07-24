@@ -10,11 +10,26 @@ function showStartModal() {
   startModal.style.display = 'block';
 }
 
+let playerName="";
+
 function startGame() {
   const playerNameInput = document.getElementById('playerName');
-  const playerName = playerNameInput.value.trim();
   startModal.style.display = 'none';
-  
+
+  /*Almacenamiento de nombres */
+  playerName = playerNameInput.value.trim();
+  let players=localStorage.getItem("hangmanPlayers");
+  if(!players){
+    players=[]; // empty
+  }else{
+    players=JSON.parse(players); // si hay jugadores,convierte JSON a array
+  }
+
+  if (!players.includes(playerName)) {
+    players.push(playerName);
+    localStorage.setItem("hangmanPlayers", JSON.stringify(players));
+  }
+
   // Muestro el resto del contenido del juego
   const gameContent = document.getElementById('gameContent');
   gameContent.classList.remove('hidden');
@@ -25,7 +40,42 @@ function startGame() {
   hangmanStage = 0;
   updateWordDisplay();
   updateHangmanAscii();
+  updateScore();
 }
+
+function updateScore() {
+  const userScoreDiv = document.getElementById("userScore");
+  let players = localStorage.getItem("hangmanPlayers");
+  if (players) {
+    players = JSON.parse(players); // Convertir la cadena JSON de jugadores a un array.
+
+    // Filtro el jugador actual de la lista de jugadores previos
+    const previousPlayers = players.filter(player => player !== playerName);
+
+    let previousPlayersString = previousPlayers.join(", "); // Unir los nombres con una coma
+
+    // Agregar un punto al final de la cadena
+    previousPlayersString += ".";
+
+    if (previousPlayersString !== ".") { // Verifico si hay jugadores previos para mostrar el mensaje
+      userScoreDiv.innerHTML = `
+        <p class="current-player">Current Player: ${playerName}</p>
+        <p class="previous-players">Previous Players: ${previousPlayersString}</p>
+      `;
+    } else {
+      userScoreDiv.innerHTML = `
+        <p class="current-player">Current Player: ${playerName}</p>
+        <p class="no-previous-players">No previous players yet.</p>
+      `;
+    }
+  } else {
+    userScoreDiv.innerHTML = `
+      <p class="current-player">Current Player: ${playerName}</p>
+      <p class="no-previous-players">No previous players yet.</p>
+    `;
+  }
+}
+
 
 function guessLetter(letter) {
   if (guessedLetters.includes(letter) || !currentWord.includes(letter)) {
@@ -145,3 +195,4 @@ window.onload = function() {
     }
   });
 }
+

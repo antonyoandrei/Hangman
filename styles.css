@@ -88,6 +88,7 @@ button:focus {
   border: 3px solid #00ff00;
   border-radius: 5px;
   margin-top: 30px;
+  margin-bottom: 30px;
   width: 40rem;
   height: 15rem;
 }
@@ -170,6 +171,23 @@ button:focus {
 
 .hidden {
   display: none;
+}
+
+.current-player{
+  text-align: center;
+  font-size: 20px;
+}
+
+.previous-players{
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.no-previous-players{
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 12px;
 }
 
 /* Responsive */
