@@ -14,7 +14,7 @@ function startGame() {
   const playerNameInput = document.getElementById('playerName');
   const playerName = playerNameInput.value.trim();
   startModal.style.display = 'none';
-
+  
   // Muestro el resto del contenido del juego
   const gameContent = document.getElementById('gameContent');
   gameContent.classList.remove('hidden');
@@ -131,4 +131,17 @@ function nextWord() {
   }
 }
 
-window.onload = showStartModal;
+window.onload = function() {
+  const playerNameInput = document.getElementById('playerName');
+  const startButton = document.getElementById('startButton');
+
+  playerNameInput.addEventListener('input', function () {
+    if (playerNameInput.value.length >= 3) {
+      startButton.disabled = false;
+      startButton.style.cursor = 'pointer';
+    } else {
+      startButton.disabled = true;
+      startButton.style.cursor = 'not-allowed';
+    }
+  });
+}

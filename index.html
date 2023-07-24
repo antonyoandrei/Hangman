@@ -51,21 +51,24 @@
           <button class="btns" onclick="guessLetter('Y')">Y</button>
           <button class="btns" onclick="guessLetter('Z')">Z</button>
         </div>
+        <div class="user-score" id="userScore">
+          <h2 class="user-score-title">User Score</h2>
+        </div>
       </div>
-    
+
       <!-- Modals -->
       <div id="loseModal" class="modal">
         <div class="modal-content">
-          <h2>You Lose!</h2>
-          <p>Sorry, you couldn't guess the word.</p>
+          <h2 class="modal-content-title">You Lose!</h2>
+          <p class="modal-content-paragraph">Sorry, you couldn't guess the word.</p>
           <button class="modal-btn" onclick="resetGame()">Play Again</button>
         </div>
       </div>
     
       <div id="winModal" class="modal">
         <div class="modal-content">
-          <h2>You Won!</h2>
-          <p>Congratulations, you guessed the word.</p>
+          <h2 class="modal-content-title">You Won!</h2>
+          <p class="modal-content-paragraph">Congratulations, you guessed the word.</p>
           <button class="modal-btn" onclick="nextWord()">Next Word</button>
         </div>
       </div>
@@ -73,13 +76,12 @@
       <!-- Ventana modal inicial -->
       <div id="startModal" class="modal">
         <div class="modal-content">
-          <h2>Hangman Game</h2>
+          <h2 class="modal-content-title">Hangman Game</h2>
           <label for="playerName">Enter your name:</label>
-          <input type="text" id="playerName" placeholder="Your Name">
-          <button class="modal-btn" onclick="startGame()">Start Game</button>
+          <input type="text" id="playerName" placeholder="Your Name" minlength="3">
+          <button class="modal-btn" onclick="startGame()" id="startButton" disabled>Start Game</button>
         </div>
       </div>
-
 
 </body>
 
