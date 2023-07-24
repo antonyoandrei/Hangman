@@ -51,10 +51,15 @@
           <button class="btns" onclick="guessLetter('Y')">Y</button>
           <button class="btns" onclick="guessLetter('Z')">Z</button>
         </div>
-        <div class="user-score" id="userScore">
-        </div>
+        <div class="user-score" id="userScore"></div>
       </div>
 
+      <div class="congrats-screen" id="congratsScreen">
+        <h1 class="congrats-title" id="congratsTitle">CONGRATULATIONS</h1>
+        <p class="congrats-paragraph" id="congratsParagraph">You guessed all words.</p>
+        <button class="modal-btn" onclick="playAgain()">Play Again</button>
+      </div>
+      
       <!-- Modals -->
       <div id="loseModal" class="modal">
         <div class="modal-content">

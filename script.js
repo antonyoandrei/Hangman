@@ -176,9 +176,18 @@ function nextWord() {
           button.disabled = false;
         });
         
-  } else {
-    hangmanImg.src = 'assets/hangman png/0.png'; 
-  }
+      } else {
+        const gameContent = document.getElementById('gameContent');
+        const congratsScreen = document.getElementById('congratsScreen');
+    
+        gameContent.style.display = 'none';
+        congratsScreen.classList.add('congrats-screen-show');
+        congratsScreen.style.display = 'block';
+      }
+}
+
+function playAgain() {
+  location.reload();
 }
 
 window.onload = function() {
@@ -195,4 +204,3 @@ window.onload = function() {
     }
   });
 }
-
