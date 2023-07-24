@@ -198,11 +198,12 @@ button:focus {
 }
 
 .congrats-screen {
-  position: absolute;
   opacity: 0;
+  position: absolute;
   text-align: center;
   transition: opacity 0.8s ease-in-out;
   margin: 20rem;
+  visibility: hidden;
 }
 
 .congrats-screen-show {
@@ -243,5 +244,9 @@ button:focus {
   .user-score-title {
     font-size: 0.9375rem;
     text-align: center;
+  }
+
+  .congrats-title {
+    font-size: 2rem;
   }
 }

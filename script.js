@@ -1,4 +1,4 @@
-const words = ["JAVA", "PIZZA", "MATRIX", "CHORIZO", "CABEZOTA"];
+const words = ["JAVA"];
 let currentWord;
 let guessedLetters;
 let wrongGuesses;
@@ -182,7 +182,7 @@ function nextWord() {
     
         gameContent.style.display = 'none';
         congratsScreen.classList.add('congrats-screen-show');
-        congratsScreen.style.display = 'block';
+        congratsScreen.style.visibility = 'visible';
       }
 }
 
